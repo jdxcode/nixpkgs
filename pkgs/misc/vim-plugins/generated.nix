@@ -5114,6 +5114,18 @@ let
     meta.homepage = "https://github.com/knubie/vim-kitty-navigator/";
   };
 
+  vim-language-server = buildVimPluginFrom2Nix {
+    pname = "vim-language-server";
+    version = "2020-05-16";
+    src = fetchFromGitHub {
+      owner = "iamcco";
+      repo = "vim-language-server";
+      rev = "0ef7a712aca0fa217bd0a13e0506f4e27240cabf";
+      sha256 = "00qf93hlb11807x5g397vdgva9xrr544x48pk3lxigz7lgs550a7";
+    };
+    meta.homepage = "https://github.com/iamcco/vim-language-server/";
+  };
+
   vim-lastplace = buildVimPluginFrom2Nix {
     pname = "vim-lastplace";
     version = "2020-01-20";
