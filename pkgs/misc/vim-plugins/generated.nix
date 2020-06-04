@@ -135,6 +135,18 @@ let
     meta.homepage = "https://github.com/vim-scripts/argtextobj.vim/";
   };
 
+  asyncomplete-vim = buildVimPluginFrom2Nix {
+    pname = "asyncomplete-vim";
+    version = "2020-05-18";
+    src = fetchFromGitHub {
+      owner = "prabirshrestha";
+      repo = "asyncomplete.vim";
+      rev = "75f25b059f4fd6d5b560a4b1ce78ccd0b760b632";
+      sha256 = "0hvnlfyal387psmlkr7bi1p87hxiqpdnp987b897mnlc1kdv2ipw";
+    };
+    meta.homepage = "https://github.com/prabirshrestha/asyncomplete.vim/";
+  };
+
   ats-vim = buildVimPluginFrom2Nix {
     pname = "ats-vim";
     version = "2020-03-24";
