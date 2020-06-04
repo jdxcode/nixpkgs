@@ -195,6 +195,18 @@ let
     meta.homepage = "https://github.com/prabirshrestha/asyncomplete-lsp.vim/";
   };
 
+  asyncomplete-necosyntax-vim = buildVimPluginFrom2Nix {
+    pname = "asyncomplete-necosyntax-vim";
+    version = "2017-04-01";
+    src = fetchFromGitHub {
+      owner = "prabirshrestha";
+      repo = "asyncomplete-necosyntax.vim";
+      rev = "567bef6538ab4e80d3fe9599370126535fe6e005";
+      sha256 = "1zmirdmsv47i9sfpb02d7gw20xzbg461n45vww83x5limx1mpl1f";
+    };
+    meta.homepage = "https://github.com/prabirshrestha/asyncomplete-necosyntax.vim/";
+  };
+
   asyncomplete-ultisnips-vim = buildVimPluginFrom2Nix {
     pname = "asyncomplete-ultisnips-vim";
     version = "2019-03-31";

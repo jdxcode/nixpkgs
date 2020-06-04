@@ -387,6 +387,7 @@ prabirshrestha/asyncomplete-buffer.vim
 prabirshrestha/asyncomplete-file.vim
 prabirshrestha/asyncomplete-flow.vim
 prabirshrestha/asyncomplete-lsp.vim
+prabirshrestha/asyncomplete-necosyntax.vim
 prabirshrestha/asyncomplete-ultisnips.vim
 prabirshrestha/asyncomplete.vim
 prabirshrestha/vim-lsp
