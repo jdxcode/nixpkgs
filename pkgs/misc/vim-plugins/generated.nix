@@ -147,6 +147,18 @@ let
     meta.homepage = "https://github.com/prabirshrestha/async.vim/";
   };
 
+  asyncomplete-buffer-vim = buildVimPluginFrom2Nix {
+    pname = "asyncomplete-buffer-vim";
+    version = "2019-11-20";
+    src = fetchFromGitHub {
+      owner = "prabirshrestha";
+      repo = "asyncomplete-buffer.vim";
+      rev = "b88179d74be97de5b2515693bcac5d31c4c207e9";
+      sha256 = "1qja8blp6bwn8zj6pcypnkdh60417qv176hf62cxyl3grk1kci2x";
+    };
+    meta.homepage = "https://github.com/prabirshrestha/asyncomplete-buffer.vim/";
+  };
+
   asyncomplete-lsp-vim = buildVimPluginFrom2Nix {
     pname = "asyncomplete-lsp-vim";
     version = "2020-05-24";
