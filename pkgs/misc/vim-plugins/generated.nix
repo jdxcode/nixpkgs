@@ -3685,18 +3685,6 @@ let
     meta.homepage = "https://github.com/dracula/vim/";
   };
 
-  vim = buildVimPluginFrom2Nix {
-    pname = "vim";
-    version = "2020-05-19";
-    src = fetchFromGitHub {
-      owner = "dracula";
-      repo = "vim";
-      rev = "494dbe9d4effff140ffe6743b614d900a0f34dd7";
-      sha256 = "0d85kgxb52xw6120q6zrksr10nj54s8qi0fl6gqw6nc08ldaq0b1";
-    };
-    meta.homepage = "https://github.com/dracula/vim/";
-  };
-
   vim-abolish = buildVimPluginFrom2Nix {
     pname = "vim-abolish";
     version = "2019-11-13";
