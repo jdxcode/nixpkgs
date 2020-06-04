@@ -91,9 +91,9 @@ class Repo:
     @retry(urllib.error.URLError, tries=4, delay=3, backoff=2)
     def has_submodules(self) -> bool:
         try:
-            urllib.request.urlopen(
-                self.url(f"blob/{self.branch}/.gitmodules"), timeout=10
-            ).close()
+            req = urllib.request.Request(self.url(f"blob/{self.branch}/.gitmodules"))
+            req.add_header("Authorization", f"token {os.getenv('GITHUB_TOKEN')}")
+            urllib.request.urlopen(req, timeout=10).close()
         except urllib.error.HTTPError as e:
             if e.code == 404:
                 return False
@@ -104,7 +104,9 @@ class Repo:
     @retry(urllib.error.URLError, tries=4, delay=3, backoff=2)
     def latest_commit(self) -> Tuple[str, datetime]:
         commit_url = self.url(f"commits/{self.branch}.atom")
-        with urllib.request.urlopen(commit_url, timeout=10) as req:
+        req = urllib.request.Request(commit_url)
+        req.add_header("Authorization", f"token {os.getenv('GITHUB_TOKEN')}")
+        with urllib.request.urlopen(req, timeout=10) as req:
             self.check_for_redirect(commit_url, req)
             xml = req.read()
             root = ET.fromstring(xml)
