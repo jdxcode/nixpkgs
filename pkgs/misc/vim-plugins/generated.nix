@@ -195,6 +195,18 @@ let
     meta.homepage = "https://github.com/prabirshrestha/asyncomplete-lsp.vim/";
   };
 
+  asyncomplete-ultisnips-vim = buildVimPluginFrom2Nix {
+    pname = "asyncomplete-ultisnips-vim";
+    version = "2019-03-31";
+    src = fetchFromGitHub {
+      owner = "prabirshrestha";
+      repo = "asyncomplete-ultisnips.vim";
+      rev = "395f8b8381ce8e5dd265e34eb6c8e883b3b803ab";
+      sha256 = "04gzq600bfsyaj6i7cr14x4f1m99wf35v3z4qscm4i12fnzncrqk";
+    };
+    meta.homepage = "https://github.com/prabirshrestha/asyncomplete-ultisnips.vim/";
+  };
+
   asyncomplete-vim = buildVimPluginFrom2Nix {
     pname = "asyncomplete-vim";
     version = "2020-05-18";
