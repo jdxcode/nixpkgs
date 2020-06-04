@@ -207,6 +207,18 @@ let
     meta.homepage = "https://github.com/prabirshrestha/asyncomplete-necosyntax.vim/";
   };
 
+  asyncomplete-necovim-vim = buildVimPluginFrom2Nix {
+    pname = "asyncomplete-necovim-vim";
+    version = "2017-05-03";
+    src = fetchFromGitHub {
+      owner = "prabirshrestha";
+      repo = "asyncomplete-necovim.vim";
+      rev = "fdca5462ee7faed7d8b65cbb6bfe3d764c19d965";
+      sha256 = "0xh3g2c6z0q1nj1hdjc450dfqyd4wziigxvrvj3yqs5xi0nw2w65";
+    };
+    meta.homepage = "https://github.com/prabirshrestha/asyncomplete-necovim.vim/";
+  };
+
   asyncomplete-tags-vim = buildVimPluginFrom2Nix {
     pname = "asyncomplete-tags-vim";
     version = "2019-10-07";
