@@ -171,6 +171,18 @@ let
     meta.homepage = "https://github.com/prabirshrestha/asyncomplete-file.vim/";
   };
 
+  asyncomplete-flow-vim = buildVimPluginFrom2Nix {
+    pname = "asyncomplete-flow-vim";
+    version = "2018-01-10";
+    src = fetchFromGitHub {
+      owner = "prabirshrestha";
+      repo = "asyncomplete-flow.vim";
+      rev = "0b5a3cf252f4d62afc0aa7c905b334b9208ea899";
+      sha256 = "1kia1wmhj4viavsw28n431qzx7k2pzl5wv4fw2wwm8cwm6946hvn";
+    };
+    meta.homepage = "https://github.com/prabirshrestha/asyncomplete-flow.vim/";
+  };
+
   asyncomplete-lsp-vim = buildVimPluginFrom2Nix {
     pname = "asyncomplete-lsp-vim";
     version = "2020-05-24";
